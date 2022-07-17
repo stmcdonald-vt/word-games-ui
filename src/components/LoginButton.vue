@@ -8,5 +8,7 @@ defineProps<{ msg: string }>()
 </template>
 
 <style scoped>
-
+  button {
+    font-size: 1.25rem;
+  }
 </style>

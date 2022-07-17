@@ -27,7 +27,7 @@ header {
   padding-right: 1rem;
 }
 
-.login-wrapper {
-
+.login-wrapper > * {
+  margin: .1rem;
 }
 </style>
