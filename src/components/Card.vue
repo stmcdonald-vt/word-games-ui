@@ -1,16 +1,22 @@
 <script setup lang="ts">
 
-const props = defineProps<{
+export interface Props {
     name: string
     filePath: string
-}>()
+    comingSoon?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+    comingSoon: false
+})
 
 const filePath: string = props.filePath; 
 </script>
 
 <template>
     <div class="card">
-        <img :src=filePath />
+        <img class="panel" v-if="!comingSoon" :src=filePath />
+        <div class="panel" v-else>Coming Soon</div>
         <span>{{ name }}</span>
     </div>
 </template>
@@ -19,11 +25,19 @@ const filePath: string = props.filePath;
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
+        min-height: 15rem;
     }
 
-    img {
+    .panel {
         max-width: 100%;
         max-height: 100%;
+        min-height: 80%;
+    }
+
+    div.panel {
+        color: white;
+        background-color: black;
+        text-align: center;
     }
 
     span {
