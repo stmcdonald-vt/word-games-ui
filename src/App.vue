@@ -7,7 +7,7 @@ import Card from './components/Card.vue';
 <template>
   <Header title="Games with Words!"></Header>
   <div class="card-wrapper">
-    <Card v-for="n in 10" name="Panda" filePath="src/redpanda.jpg"/>
+    <Card v-for="n in 10" name="Panda" filePath="src/redpanda.jpg" :comingSoon=false />
   </div>
   
 </template>
