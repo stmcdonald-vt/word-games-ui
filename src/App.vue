@@ -7,7 +7,7 @@ import Card from './components/Card.vue';
 <template>
   <Header title="Games with Words!"></Header>
   <div class="card-wrapper">
-    <Card v-for="n in 10" name="Panda" filePath="src/redpanda.jpg"/>
+    <Card v-for="n in 10" name="Panda" filePath="src/redpanda.jpg" description="This game is about pandas :)" destination="https://google.com"/>
   </div>
   
 </template>
@@ -16,7 +16,9 @@ import Card from './components/Card.vue';
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem
+  grid-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 </style>

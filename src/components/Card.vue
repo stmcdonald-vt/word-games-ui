@@ -3,23 +3,19 @@
 const props = defineProps<{
     name: string
     filePath: string
+    description: string
+    destination: string
 }>()
 
-const filePath: string = props.filePath; 
 </script>
 
 <template>
-    <!-- <div class="card">
-        <img :src=filePath />
-        <span>{{ name }}</span>
-    </div> -->
-
     <div class="card">
         <img :src=filePath class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">{{ description }}</p>
+            <a :href=destination class="btn btn-primary">Play</a>
         </div>
     </div>
 </template>
