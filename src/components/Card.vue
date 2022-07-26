@@ -15,7 +15,7 @@ const props = defineProps<{
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
             <p class="card-text">{{ description }}</p>
-            <a :href=destination class="btn btn-primary">Play</a>
+            <router-link :to="destination" class="btn btn-primary">Play</router-link>
         </div>
     </div>
 </template>

@@ -10,10 +10,10 @@ defineProps<{
   <header>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <router-link class="navbar-brand" to="/">
         <!-- <img src="/src/redpanda.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
           {{ title }}
-        </a>
+        </router-link>
         <div class="login-wrapper">
           <LoginButton msg="Login"/>
           <LoginButton msg="Signup"/> 

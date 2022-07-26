@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
 import Card from './components/Card.vue';
+import router from './router';
 
 </script>
 
 <template>
   <Header title="Games with Words!"></Header>
-  <div class="card-wrapper">
-    <Card v-for="n in 10" name="Panda" filePath="src/redpanda.jpg" description="This game is about pandas :)" destination="https://google.com"/>
-  </div>
-  
+  <router-view/>
 </template>
 
 <style scoped>
