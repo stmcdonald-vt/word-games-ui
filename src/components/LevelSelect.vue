@@ -1,15 +1,16 @@
 <script setup lang="ts">
 
 const props = defineProps<{
-  levels: string[]
+  levels: number[]
 }>()
 
 </script>
 
 <template>
-  <ul class="nav flex-column">
+  <h2>Level Select</h2>
+  <ul class="nav justify-content-center text-center gy-3">
     <li v-for="level in levels" class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">{{ level }}</a>
+      <button @click="$emit('level-selected', level)" class="btn btn-outline-dark" aria-current="page">{{ "Level " + level }}</button>
     </li>
   </ul>
 </template>

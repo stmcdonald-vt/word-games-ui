@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
 const props = defineProps<{
-  length: number
+  word: string
 }>()
 
 </script>
 
 <template>
-  <span :aria-label="`Word placeholder: ${length} blanks`">{{ "____ ".repeat(length)}}</span>
+  <span :aria-label="`Correct response: ${word}`">{{ word }}</span>
 </template>
 
 <style scoped>

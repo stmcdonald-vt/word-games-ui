@@ -11,7 +11,6 @@ defineProps<{
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <router-link class="navbar-brand" to="/">
-        <!-- <img src="/src/redpanda.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
           {{ title }}
         </router-link>
         <div class="login-wrapper">
