@@ -4,11 +4,8 @@ defineProps<{ msg: string }>()
 </script>
 
 <template>
-  <button>{{ msg }}</button>
+  <button class="btn btn-primary">{{ msg }}</button>
 </template>
 
 <style scoped>
-  button {
-    font-size: 1.25rem;
-  }
 </style>

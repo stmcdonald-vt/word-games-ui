@@ -7,6 +7,21 @@ defineProps<{
 </script>
 
 <template>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        <img src="/src/redpanda.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Bootstrap
+        </a>
+        <div class="login-wrapper">
+          <LoginButton msg="Login"/>
+          <LoginButton msg="Signup"/> 
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- 
     <header>
         <h1>{{ title }}</h1>
         <div class="login-wrapper">
@@ -14,12 +29,15 @@ defineProps<{
           <LoginButton msg="Signup"/> 
         </div>
         
-    </header>
+    </header> -->
 </template>
 
 <style scoped>
-header {
-  background-color: lightgray;
+.navbar {
+  margin-bottom: 2rem;
+}
+.container-fluid {
+  /* background-color: lightgray; */
   display: flex;
   justify-content: space-between;
   align-items: center;
