@@ -21,7 +21,7 @@ const words: { letters: string[]; lengths: number[]; confirmed: string[] } =
 async function populateLevels() {
     try {
         const response = await axios.get(
-            "http://localhost:3000/game/soup/levels"
+            "https://api.word-games.stmcdonald.net/game/soup/levels"
         );
         levels.options = response.data;
     } catch (err) {
@@ -32,7 +32,7 @@ async function populateLevels() {
 async function updateLevel(id: number) {
     try {
         const response = await axios.get(
-            `http://localhost:3000/game/soup/level/${id}`
+            `https://api.word-games.stmcdonald.net/game/soup/level/${id}`
         );
         words.letters = response.data.letters;
         words.lengths = response.data.lengths;
@@ -52,7 +52,7 @@ async function validateGuess(guess: string) {
 
     try {
         const response = await axios.post(
-            "http://localhost:3000/game/soup/validate",
+            "https://api.word-games.stmcdonald.net/game/soup/validate",
             {
                 level: levels.current,
                 guess: guess,
