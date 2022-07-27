@@ -36,6 +36,7 @@ async function updateLevel(id: number) {
         );
         words.letters = response.data.letters;
         words.lengths = response.data.lengths;
+        words.confirmed = [];
         levels.displayed = true;
         levels.current = id;
     } catch (err) {
