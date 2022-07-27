@@ -10,10 +10,9 @@ defineProps<{
   <header>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        <img src="/src/redpanda.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        Bootstrap
-        </a>
+        <router-link class="navbar-brand" to="/">
+          {{ title }}
+        </router-link>
         <div class="login-wrapper">
           <LoginButton msg="Login"/>
           <LoginButton msg="Signup"/> 
@@ -21,15 +20,6 @@ defineProps<{
       </div>
     </nav>
   </header>
-<!-- 
-    <header>
-        <h1>{{ title }}</h1>
-        <div class="login-wrapper">
-          <LoginButton msg="Login"/>
-          <LoginButton msg="Signup"/> 
-        </div>
-        
-    </header> -->
 </template>
 
 <style scoped>
